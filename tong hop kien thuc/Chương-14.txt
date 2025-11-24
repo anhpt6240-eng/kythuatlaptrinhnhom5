@@ -7,13 +7,27 @@ Using Databases and SQL
 2) T?o b?ng
      cur.execute('DROP TABLE IF EXISTS Counts')
      cur.execute('CREATE TABLE Counts (email TEXT, count INTEGER)')
-3) ThÍm d? li?u
+3) Th√™m d? li?u
     cur.execute('INSERT INTO Counts (email, count) VALUES (?, ?)', ('user@gmail.com', 1))
     conn.commit()
 4) Truy v?n d? li?u
      sqlstr = 'SELECT email, count FROM Counts ORDER BY count DESC LIMIT 10'
      for row in cur.execute(sqlstr):
          print(row)
-5) C‚u l?nh SQL co b?n
+5) C√¢u l?nh SQL co b?n
 L?nh
-› nghiaSELECTTruy v?n d? li?uINSERTThÍm d? li?uUPDATEC?p nh?tDELETEXÛaWHERE–i?u ki?nORDER BYS?p x?p
+
+√ù nghia
+SELECT
+Truy v?n d? li?u
+INSERT
+Th√™m d? li?u
+UPDATE
+C?p nh?t
+DELETE
+X√≥a
+WHERE
+√êi?u ki?n
+ORDER BY
+S?p x?p
+
