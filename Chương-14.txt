@@ -1,0 +1,19 @@
+Chuong 14
+Using Databases and SQL
+1)K?t n?i SQLite
+   import sqlite3
+   conn = sqlite3.connect('emaildb.sqlite')
+   cur = conn.cursor()
+2) T?o b?ng
+     cur.execute('DROP TABLE IF EXISTS Counts')
+     cur.execute('CREATE TABLE Counts (email TEXT, count INTEGER)')
+3) Thêm d? li?u
+    cur.execute('INSERT INTO Counts (email, count) VALUES (?, ?)', ('user@gmail.com', 1))
+    conn.commit()
+4) Truy v?n d? li?u
+     sqlstr = 'SELECT email, count FROM Counts ORDER BY count DESC LIMIT 10'
+     for row in cur.execute(sqlstr):
+         print(row)
+5) Câu l?nh SQL co b?n
+L?nh
+Ý nghiaSELECTTruy v?n d? li?uINSERTThêm d? li?uUPDATEC?p nh?tDELETEXóaWHEREÐi?u ki?nORDER BYS?p x?p

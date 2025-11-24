@@ -1,0 +1,27 @@
+Chuong 13
+Object-Oriented Programming
+1)T?o class co b?n
+class PartyAnimal:
+    x = 0
+    def party(self):
+        self.x = self.x + 1
+        print("So far", self.x)
+2) T?o d?i tu?ng
+    an = PartyAnimal()
+    an.party()
+    an.party()
+3) Constructor & Destructor
+class PartyAnimal:
+    def __init__(self, name):
+        self.name = name
+        print(self.name, 'constructed')
+    def __del__(self):
+        print(self.name, 'destroyed')
+4) K? th?a (Inheritance)
+class FootballFan(PartyAnimal):
+    points = 0
+    def touchdown(self):
+        self.points += 7
+        self.party()
+        print(self.name, "points", self.points)
+
